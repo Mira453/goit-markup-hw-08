@@ -1,0 +1,213 @@
+.header {
+    position: relative;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid #ECECEC;
+    position: relative;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__nav {
+        display: flex;
+        align-items: center;
+    @media (min-width: 1200px) {
+        margin-left: 93px;
+    }
+}
+
+.logo {
+    color: #2196F3;
+    @include font(null, 24px, 1.1667, 0.03em);
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    &__accent {
+            color: #000000;
+        }
+    @media (min-width: 768px) {
+        @include font(null, 26px, 1.1923, 0.03em)
+     }
+}
+.header__menu {
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
+    gap: 50px;
+}
+.header__contacts {
+    @media screen and (min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+        }
+    @media (min-width: 1200px) {
+        flex-direction: row;
+        gap: 50px;
+        margin-left: auto;
+    }
+}
+.contacts__iteam {
+    margin-bottom: 10px;
+}
+.menu__link {
+    color: var(--title-link-color);
+    @include font(500, null, 1.1429, null);
+    text-decoration: none;
+    padding: 32px 0px;
+    display: block;
+    fill: #757575;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        color: var(--hover-color);
+    }
+}
+.contacts__icon {
+    margin-right: 10px;
+    fill: currentColor;
+}
+.menu__link--current {
+    position: relative;
+    display: block;
+    color: #2196F3;
+    padding: 32px 0px;
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        bottom: -1px;
+        left: 0;
+        background-color: #2196F3;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+    }
+}
+.contacts__link {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    @include font(500, null, 1.1429, null);
+    text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        color: var(--hover-color);
+    }
+}
+
+
+
+.menu,
+.contacts {
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+.mob-menu__open {
+    border: none;
+    background-color: transparent;
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+.mob-menu {
+    position: fixed;
+    z-index: 1;
+    // outline: 2px solid red;
+    width: 100vw;
+    height: 100vh;
+    top: 0%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+    overflow: scroll;
+    @media (min-width: 480px) {
+        max-width: 480px;
+    }
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.mob-menu__container {
+    // outline: 1px solid red;
+    top: 0%;
+    padding: 48px 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.mob-menu__close {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+}
+.mob-menu__iteam {
+    margin-bottom: 32px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.mob-menu__link {
+    display: block;
+    color: var(--title-link-color);
+    @include font(500, 40px, 1.175, null);
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        color: var(--hover-color);
+        }
+
+}
+.mob-menu__icon {
+    &:hover,
+    &:focus {
+        fill: var(--hover-color);
+    }
+}
+
+.mob-contacts__link {
+    display: block;
+    color: var(--text-color);
+    @include font(500, 24px, 1.1667, null);
+    text-decoration: none;
+    margin-bottom: 32px;
+    &:hover,
+    &:focus {
+        color: var(--hover-color);
+        @include font(500, 34px, 1.1765, null);
+    }
+}
+.menu-soc {
+    display: flex;
+
+}
+.menu-soc__iteam {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
+    margin-right: 10px;
+    &:last-child {
+        border: none;
+        padding: 0;
+        margin: 0%;
+    }
+}
+.menu-soc__link {
+    @include font(500, 18px, 1.2222, null);
+    text-decoration: none;
+    color:var(--hover-color);
+}

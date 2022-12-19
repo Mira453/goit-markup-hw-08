@@ -1,0 +1,26 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--title-link-color);
+    letter-spacing: 0.03em;
+    margin: 0px;
+}
+img {
+    display: block;
+}
+
+.text {
+    color: var(--text-color);
+    letter-spacing: 0.03em;
+    margin: 0px;
+}
+.bn {
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: inherit;
+    border: transparent;
+    font-size: 16px;
+}

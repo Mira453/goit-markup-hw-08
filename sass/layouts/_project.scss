@@ -1,0 +1,105 @@
+.project {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.project-items {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+    gap: 8px;
+}
+
+.project-bn {
+    color: #212121;
+    @include font(500, null, 1.625, 0.03em);
+    text-align: center;
+    background-color: #F5F4FA;
+    padding: 6px 25px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        background-color: var(--hover-color);
+        color: #FFFFFF;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
+            0 1px 2px 0 rgba(0, 0, 0, 0.08),
+            0 3px 1px 0 rgba(0, 0, 0, 0.1);
+    }
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.project-item {
+    width: calc((100% - 60px) / 3);
+}
+
+
+.project-link {
+    text-decoration: none;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        display: block;
+        box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.16),
+            0 4px 4px 0 rgba(0, 0, 0, 0.06),
+            0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    }
+}
+
+.project-item>img {
+    max-width: 100%;
+    height: auto;
+}
+
+.project-list .title {
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+}
+
+.project-list .text {
+    font-size: 16px;
+    line-height: 1.875;
+}
+
+.project-meta {
+    border: 1px solid #ECECEC;
+    border-top: none;
+    padding: 20px 24px;
+}
+
+.project-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-addition {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+    padding: 63px 24px;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .project-link:hover & {
+         transform: translateY(0);
+    }
+}
+
+.project-addition .text {
+    top: 50%;
+    left: 50%;
+    font-size: 18px;
+    line-height: 1.5555;
+    color: #FFFFFF;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
