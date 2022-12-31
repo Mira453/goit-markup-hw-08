@@ -194,6 +194,7 @@
 }
 .menu-soc {
     display: flex;
+    flex-wrap: wrap;
 
 }
 .menu-soc__iteam {
@@ -204,6 +205,9 @@
         border: none;
         padding: 0;
         margin: 0%;
+    }
+    @media (max-width: 436px) {
+        margin-bottom: 5px;
     }
 }
 .menu-soc__link {
